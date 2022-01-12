@@ -1,0 +1,50 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// primary:
+// secondary:
+// background:
+// surface:
+// error:
+// on-primary:
+// on-secondary:
+// on-surface:
+// on-error:
+// text-primary-on-background:
+// text-secondary-on-background:
+// text-hint-on-background:
+// text-disabled-on-background:
+// text-icon-on-background:
+// text-primary-on-light:
+// text-secondary-on-light:
+// text-hint-on-light:
+// text-disabled-on-light:
+// text-icon-on-light:
+// text-primary-on-dark:
+// text-secondary-on-dark:
+// text-hint-on-dark:
+// text-disabled-on-dark:
+// text-icon-on-dark:
+
+// Svelte Colors! (Dark Theme)
+@use '@material/theme/index' as theme with (
+  $primary: #395C6B,
+  $secondary: #BFBDC1,
+  $surface: color.adjust(color-palette.$grey-900, $blue: +4),
+  $background: #000,
+  $error: color-palette.$red-700
+);
+
+html,
+body {
+  background-color: #000;
+  color: theme.$on-surface;
+}
+
+a {
+  color: #40b3ff;
+}
+a:visited {
+  color: color.scale(#40b3ff, $lightness: -35%);
+}

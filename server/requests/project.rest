@@ -1,0 +1,30 @@
+###
+POST http://127.0.0.1:8080/create/project/eyJhbGciOiJIUzI1NiJ9.eyJfa2V5IjoiMTIzNDU2Nzg5MCIsImV4cCI6IjE2NDEyNTI4NzUifQ.BUhCzluRJ5uws9qZth12wPo8Osr11-ejDXLkXvhpJU4
+Content-Type: application/json
+
+{
+  "_id":"",
+  "_key":"",
+  "_rev":"",
+  "title":"Machine Shop",
+  "description":"Machine Shop"
+}
+
+###
+GET http://127.0.0.1:8080/read/projects/eyJhbGciOiJIUzI1NiJ9.eyJfa2V5IjoiMTIzNDU2Nzg5MCIsImV4cCI6IjE2NDEyNTI4NzUifQ.BUhCzluRJ5uws9qZth12wPo8Osr11-ejDXLkXvhpJU4
+Content-Type: application/json
+
+
+###
+POST http://127.0.0.1:8080/create/project/eyJhbGciOiJIUzI1NiJ9.eyJfa2V5IjoiMTIzNDU2Nzg5MCIsImV4cCI6IjE2NDEyNTU2MDEifQ.01MZgNsbRPYVS8qc6sPFAczbM5YjKKF-00OOQe2f0fQ
+Content-Type: application/json
+
+{
+  "_id":"",
+  "_key":"",
+  "_rev":"",
+  "number":"",
+  "title":"",
+  "description":"Test!!",
+  "business_case":"Test!!"
+}

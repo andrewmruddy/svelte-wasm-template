@@ -1,0 +1,12 @@
+###
+POST http://127.0.0.1:8080/sign-up
+Content-Type: application/json
+
+{
+  "_key":"",
+  "email":"kathering.f.ruddy@gmail.com",
+  "password":"password"
+}
+
+###
+GET http://127.0.0.1:8080/register/eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthdGhlcmluZy5mLnJ1ZGR5QGdtYWlsLmNvbSIsImV4cCI6IjE2NDA0NTgyMDEiLCJwYXNzd29yZCI6InBhc3N3b3JkIn0.KuJ1AA-29Ro3iKPgDqUpVzE1RO-UGHjOolJmGiHhrqI

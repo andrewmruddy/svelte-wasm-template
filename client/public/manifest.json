@@ -1,0 +1,15 @@
+{
+    "background_color": "purple",
+    "description": "SVELTE TEMPLATE",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon/cms.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "name": "SVELTE TEMPLATE",
+    "short_name": "SV",
+    "start_url": "/index.html"
+  }

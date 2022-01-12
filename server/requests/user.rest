@@ -1,0 +1,53 @@
+### Rust Server Tests
+### Create
+# pub struct User{
+#     pub _id: String,
+#     pub _key: String,
+#     pub _rev: String,
+#     pub first:String,
+#     pub last:String,
+#     pub title:String,
+#     pub email:String,
+#     pub phone:String,
+#     pub username:String,
+#     pub password:String,
+# }
+POST http://127.0.0.1:8080/create/user
+Content-Type: application/json
+
+{
+  "token":"1234567890",
+  "user":{
+    "_key":"1234567890",
+    "email":"andrewmruddy@gmail.com",
+    "password":"andrewmruddy@gmail.com"
+  }
+}
+
+### Read
+POST http://127.0.0.1:8080/read/user
+Content-Type: application/json
+Authorization: Bearer
+
+{
+  "_key":"46023905",
+  "email":"aruddy@slb.com"
+}
+
+### Update
+POST http://127.0.0.1:8080/delete/user
+Content-Type: application/json
+
+{
+  "_key":46023905,
+  "email":"aruddy@slb.com"
+}
+
+### Delete
+POST http://127.0.0.1:8080/delete/user
+Content-Type: application/json
+
+{
+  "_key":46023905,
+  "email":"aruddy@slb.com"
+}
