@@ -1,17 +1,7 @@
 extern crate bcrypt;
 use bcrypt::{DEFAULT_COST, hash, verify};
-use shared::nodes::user::User;
+use shared::models::user::User;
 use regex::Regex;
-// let hashed = hash("hunter2", DEFAULT_COST)?;
-// let valid = verify("hunter2", &hashed)?;
-
-// let key: Hmac<Sha256> = Hmac::new_from_slice(b"some-secret").unwrap();
-// let mut claims = BTreeMap::new();
-// claims.insert("sub", "someone");
-
-// let token_str = claims.sign_with_key(&key).unwrap();
-
-// assert_eq!(token_str, "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb21lb25lIn0.5wwE1sBrs-vftww_BGIuTVDeHtc1Jsjo-fiHhDwR8m0");
 
 pub fn hash_password(password: &str) -> Option<String>{
     let hashed = hash(password, DEFAULT_COST);

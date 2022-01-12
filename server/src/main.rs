@@ -4,9 +4,7 @@ pub mod services;
 pub mod models;
 extern crate shared;
 extern crate colored;
-
-#[cfg(test)]
-mod tests;
+use services::utils;
 
 #[macro_use] 
 extern crate serde_derive;
@@ -28,26 +26,17 @@ async fn main() -> std::io::Result<()> {
             // Auth
             .service(routes::sign_up::sign_up)
             .service(routes::sign_up::register)
-            .service(routes::login::validate)
             .service(routes::login::login)
-            // Create Documents
-            // .service(routes::create::user)
-            .service(routes::create::project)
-            // .service(routes::create::action)
-            // .service(routes::create::expense)
-            // Read Documents
-            .service(routes::read::projects)
+            // Create
+            .service(routes::create::user)
+            // Read
             .service(routes::read::user)
-            // Delete Documents
-            .service(routes::delete::user)
-            // Update Documents
+            // Update
             .service(routes::update::user)
-            // Create Edges
-            // Read Edges
-            // Update Edges
-            // Delete Edges
+            // Delete
+            .service(routes::delete::user)
     })
-    .bind("127.0.0.1:8080")?
+    .bind(utils::get_ip())?
     .run()
     .await
 }

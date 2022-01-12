@@ -1,4 +1,4 @@
-use hmac::{Hmac, NewMac};
+use hmac::{Hmac};
 use jwt::{SignWithKey, VerifyWithKey};
 use sha2::Sha256;
 use std::{collections::BTreeMap, time::{SystemTime, UNIX_EPOCH}, error::Error};

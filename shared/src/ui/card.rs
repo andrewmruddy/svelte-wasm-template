@@ -2,9 +2,6 @@ use serde::{Serialize, Deserialize};
 use serde_json;
 use wasm_bindgen::prelude::wasm_bindgen;
 
-use crate::nodes::project::Project;
-
-
 #[derive(Serialize,Deserialize, Clone)]
 #[wasm_bindgen]
 pub struct Card{
@@ -70,14 +67,6 @@ impl Card{
         return Card { title: "".to_string(), key: "".to_string(), description: "".to_string(), primary_label: "".to_string() }
     }
     
-    pub fn from_project(project: &Project) -> Card{
-        return Card{
-            title: project.title(),
-            key: project._key(),
-            description: project.description(),
-            primary_label: "VIEW".to_string(),
-        }
-    }
     pub fn se(&self)->Option<String>{
         let serialized_result = serde_json::to_string(&self);
         match serialized_result{
@@ -92,4 +81,7 @@ impl Card{
             Err(_e) => return None
         }
     }
+}
+pub trait UICard{
+    fn to_card(&self)->Card;
 }
